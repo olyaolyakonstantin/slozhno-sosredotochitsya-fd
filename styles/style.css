@@ -1,5 +1,224 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  padding: 0 10px;
+  font-family: var(--main-font, san-serif);
+  color: var(--text-color, #F1B2CE);
+  background-color: var(--bg-color, #000028);
+  background-image: var(--bg-image, url("../images/cover-image-dark.png"));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* .header__decorative_lettering::after {
+  content: "  •";
+  color: var(--accent-color);
+} */
+
+.header {
+  display: grid;
+  padding-block-start: 20px;
+  min-block-size: 668px;
+}
+
+.header__theme-menu-list {
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 11.5px;
+  color: var(--button-color);
+  margin-block-end: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);  line-height: 83%;
+  color: var(--title-color ,#DB00FF);
+  margin-block-start: 55px;
+}  
+
+.header__subtitle {
+  align-self: flex-start;
+}
+
+.text-accent_shadow {
+  text-shadow: 4px 4px var(--accent-color, #FF0070);
+}  
+
+/* .header__theme-menu-button_active {
+  border: 1px solid; 
+} */
+
+.title-decor {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  margin-block: 10px;
+}
+
+.problem {
+  padding-block-start: 40px;
+  display: grid;
+  gap: 20px;
+}
+
+.problem__title {
+  color: var(--accent-color, #FF0070);
+  font-size: 18px;
+}
+
+.problem__content-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.problem__content-block_paragraph {
+  display: inline-block;
+  padding-block-end: 20px;
+}
+
+.reasons {
+  padding-block-start: 40px;
+  display: grid;
+  gap: 20px;
+}
+
+.reasons__title {
+  color: var(--accent-color, #FF0070);
+  font-size: 18px;
+}
+
+.reasons__content-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.reasons__content-block_paragraph {
+  display: inline-block;
+  padding-block-end: 20px;
+}
+
+.decisions {
+  padding-block-start: 40px;
+  display: grid;
+  gap: 20px;
+}
+
+.decisions__title {
+  color: var(--accent-color, #FF0070);
+  font-size: 18px;
+}
+
+.decisions__content-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.decisions__content-block_paragraph {
+  display: inline-block;
+  padding-block-end: 20px;
+}
+
+.gallery {
+  block-size: 100vw;
+  display: grid;
+  gap: 10px;
+}
+
+.visual__gallery-image {
+  display: inline-block;
+  inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 0 20px;
+  }
+
+  .header {
+    min-block-size: 1024px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: reapeat(4, 1 fr);
+  }
+
+  .header__theme-menu {
+    grid-row: 1 / 3; 
+    grid-column: 2;
+  }
+
+  .header__title {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+
+  .header__subtitle {
+    grid-row: 4;
+    grid-column: 2 / 3;
+  }
+
+  .problem {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .decisions {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    max-block-size: calc(100vh - 5em);
+
+  }
+
+  .visual__gallery-image:nth-child(1)  {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .visual__gallery-image:nth-child(2)  {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .visual__gallery-image:nth-child(3)  {
+    grid-column: span 1;
+    grid-row:  span 2;
+  }
+
+  .visual__gallery-image:nth-child(4)  {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .visual__gallery-image:nth-child(5)  {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+ .header__theme-menu {
+    grid-row: 1; 
+    grid-column: span 2;
+  } 
+
+  .header__theme-menu-list { 
+    flex-direction: row; 
+    justify-content: center;
+    align-content: flex-start;
+  }
+
+  .reasons__content-block {
+    flex-direction: row;
+    gap: 20px;
+  }
 }
