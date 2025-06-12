@@ -5,16 +5,22 @@
 
 :root {
   --indent: 10px;
-
-  --main-font: 'IBM Plex mono';
+  --main-font: 'IBM Plex mono', Arial, sans-serif;
   --text-color: #F1B2CE;
   --title-color: #DB00FF;
   --title-decor_text-color: #000028;
-  --section_title-color: #FF0070;
+  --section-title-color: #FF0070;
   --button-color: #FF0070;
+  --button_hover-color: #FF007066;
   --bg-image: url("../images/cover-image-dark.png");
   --accent-color: #FF0070;
   --corners-color: #FF0070;
   --bg-color: #000028;
 
+}
+
+@media (min-width: 768px) {
+  :root {
+    --indent: 20px;
+  }
 }
