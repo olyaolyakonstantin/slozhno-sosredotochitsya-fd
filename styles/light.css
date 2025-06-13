@@ -1,10 +1,10 @@
 :root.theme-light {
   --text-color: #353430;
   --title-color: #FFC2E6;
-  --title-decor_text-color: #353430;
+  --title-decor-text-color: #353430;
   --section-title-color: #353430;
   --button-color: #353430;
-  --button_hover-color: #32312D66;
+  --button-hover-color: #32312D66;
   --bg-image: url("../images/cover-image-light.png");
   --accent-color: #FF8DCB;
   --corners-color: #353430;
@@ -24,7 +24,7 @@
   :root {
     --text-color: #353430;
     --title-color: #FFC2E6;
-    --title-decor_text-color: #353430;
+    --title-decor-text-color: #353430;
     --section-title-color: #353430;
     --button-color: #353430;
     --bg-image: url("../images/cover-image-light.png");
